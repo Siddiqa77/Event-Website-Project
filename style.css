@@ -1,0 +1,594 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Header and Background Styling */
+header {
+  width: 100%;
+  height: 900px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)),
+    url("https://img.freepik.com/free-photo/prepared-wedding-hall_8353-9873.jpg?size=626&ext=jpg&ga=GA1.1.186544464.1703630634&semt=ais");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Logo Styling */
+.header img {
+  width: 250px;
+  height: auto;
+  margin-top: 15px;
+}
+
+/* Navbar Styling */
+nav {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+
+.menu {
+  display: flex;
+  gap: 15px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 18px;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #ffcccb;
+}
+
+/* Menu Link Hover Effect */
+.menu a:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: indianred;
+  transition: width 0.4s;
+}
+
+.menu a:hover:before {
+  width: 100%;
+}
+
+/* Register Button Styling */
+.register a {
+  color: white;
+  background-color: indianred;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 8px;
+  transition: background 0.3s, border 0.3s;
+}
+
+.register a:hover {
+  background-color: transparent;
+  border: 1px solid indianred;
+}
+
+p{
+  font-family: "poppins", serif;
+}
+/* Hero Section */
+.hero {
+  max-width: 650px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-size: 24px;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin: 10px 0;
+}
+
+.hero a {
+  display: inline-block;
+  text-decoration: none;
+  background-color: indianred;
+  color: white;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s, border 0.3s;
+}
+
+.hero a:hover {
+  background-color: transparent;
+  border: 2px solid indianred;
+}
+.paw {
+  font-family: "Poppins", serif;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  /* Adjust Logo Size */
+  .header img {
+    width: 120px;
+  }
+
+  /* Adjust Hero Font Sizes */
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .hero a {
+    font-size: 1em;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  /* Stack menu items vertically */
+  .menu,
+  .register {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .menu a,
+  .register a {
+    font-size: 1em;
+    padding: 8px 15px;
+  }
+
+  .hero h1 {
+    font-size: 1.8em;
+  }
+
+  .hero a {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Smaller Screen Adjustments */
+  .header img {
+    width: 100px;
+  }
+
+  .menu a,
+  .register a {
+    font-size: 0.9em;
+    padding: 6px 10px;
+  }
+
+  .hero h1 {
+    font-size: 1.5em;
+  }
+
+  .hero {
+    font-size: 1em;
+    padding: 0 15px;
+  }
+
+  .hero a {
+    font-size: 0.9em;
+    padding: 6px 12px;
+  }
+}
+
+/*service start*/
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 0 8%;
+}
+
+.container h1 {
+  text-align: center;
+  padding-top: 5%;
+  margin-bottom: 100px;
+  font-size: 50px;
+  position: relative;
+}
+
+.container h1:before {
+  content: "";
+  background: #303ef7;
+  width: 100px;
+  height: 5px;
+  position: absolute;
+  top:100%;
+  left: 50%;
+  height: 4px;
+  transform: translateX(-50%);
+  transition: width 0.4s;
+  
+}
+
+.container h1:hover:before{
+    width: 20%;
+    cursor: pointer;
+    
+}
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+}
+
+.service {
+  text-align: center;
+  padding: 25px 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid black;
+  margin-bottom: 100px;
+  transition: transform 0.5s, background 0.5s;
+}
+
+.service i {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #303ef7;
+}
+
+.service h1 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.service:hover {
+  background: indianred;
+  color: #fff;
+  transform: scale(1s);
+}
+
+.service:hover i {
+  color: #fff;
+}
+
+.service p {
+  font-size: 15px;
+  font-family: "Poppins" serif;
+  margin-top: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container h1 {
+    font-size: 1.8em;
+  }
+
+  .row {
+    grid-gap: 15px;
+  }
+
+  .service {
+    padding: 15px 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container h1 {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+  }
+
+  .service {
+    padding: 10px 5px;
+    font-size: 0.9em;
+  }
+}
+/* Service Section End */
+
+/*service end*/
+
+/* Event Title Styling */
+.event {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Image Grid Styling */
+.image {
+  width: 90%;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Individual Image Styling */
+.image img {
+  width: 100%;
+  cursor: pointer;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  transition: transform 0.3s ease;
+}
+
+.image img:hover {
+  transform: scale(1.05);
+}
+
+/* Paragraph Styling */
+#para {
+  font-size: 1.25em;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 600px;
+  padding: 20px;
+}
+
+/* Button Styling */
+.btn-book {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-book a {
+  text-decoration: none;
+  letter-spacing: 3px;
+  display: inline-block;
+  border-radius: 10px;
+  font-size: 18px;
+  padding: 10px 20px;
+  color: black;
+  transition: 0.4s;
+  border: 1px solid black;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.btn-book a:hover {
+  background-color: transparent;
+  border: 2px solid;
+  background-color: #303ef7;
+  color: white;
+}
+
+
+/* Additional Text Styling */
+.paw {
+  font-size: 0.9em;
+  font-family: "poppins", sans-serif;
+  text-align: center;
+  margin: 20px auto;
+  max-width: 80%;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .event {
+    font-size: 1.8em;
+  }
+
+  #para {
+    font-size: 1.1em;
+    padding: 15px;
+  }
+
+  .btn-book a {
+    font-size: 1.2em;
+    padding: 8px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .event {
+    font-size: 1.6em;
+  }
+
+  #para {
+    font-size: 1em;
+    max-width: 90%;
+  }
+
+  .btn-book a {
+    font-size: 1.1em;
+    padding: 8px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .event {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+  }
+
+  .image {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+  }
+
+  #para {
+    font-size: 0.9em;
+    padding: 10px;
+  }
+
+  .btn-book a {
+    font-size: 1em;
+    padding: 8px 10px;
+  }
+
+  .paw {
+    font-size: 0.8em;
+  }
+}
+
+/*Footer Start */
+/* Start Footer */
+footer {
+  background-color: #121212;
+  padding: 60px 20px;
+  color: #fff;
+  text-align: center;
+}
+
+footer .text {
+  max-width: 500px;
+  margin: auto;
+}
+
+footer .text h2 {
+  font-family: "poppins", serif;
+  font-size: 19px;
+  letter-spacing: 1.9px;
+  margin-bottom: 25px;
+}
+
+footer .text .fa-asterisk {
+  font-size: 12px;
+}
+
+footer .text p {
+  line-height: 27px;
+  font-family: "poppins", serif;
+}
+
+footer .contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+footer .contact-container > div {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+}
+
+footer .contact-container h3 {
+  font-size: 19px;
+  letter-spacing: 1.9px;
+}
+
+footer .social-media .links a {
+  margin: 0 10px;
+  font-size: 25px;
+  color: #919191;
+  transition: color 0.3s;
+}
+
+footer .social-media .links a:hover {
+  color: #303ef7;
+}
+
+footer .newsletter input {
+  padding: 10px;
+  width: 270px;
+  max-width: 80%;
+  background-color: #eee;
+  border: none;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+footer .newsletter i {
+  margin-left: -40px;
+  vertical-align: middle;
+  font-size: 21px;
+  color: #121212;
+  cursor: pointer;
+}
+
+footer .newsletter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+footer a {
+  color: #919191;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  footer .text h2 {
+    font-size: 17px;
+  }
+
+  footer .contact-container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  footer .contact-container h3 {
+    font-size: 18px;
+  }
+
+  footer .social-media .links a {
+    font-size: 22px;
+    margin: 0 8px;
+  }
+
+  footer .newsletter input {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  footer .text h2 {
+    font-size: 16px;
+    letter-spacing: 1.5px;
+  }
+
+  footer .text p {
+    line-height: 24px;
+    font-size: 14px;
+  }
+
+  footer .contact-container h3 {
+    font-size: 17px;
+  }
+
+  footer .social-media .links a {
+    font-size: 20px;
+    margin: 0 5px;
+  }
+
+  footer .newsletter input {
+    width: 100%;
+  }
+}
+
+/*End Footer*/
